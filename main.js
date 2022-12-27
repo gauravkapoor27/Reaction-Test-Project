@@ -16,7 +16,7 @@ let startGame = () => {
   let timeDelay = (Math.random() * 3 + 2) * 1000;
   // let timeDelay = 2000;
   mainBox.innerText = "";
-  mainBox.style.backgroundColor = "red";
+  mainBox.style.backgroundColor = "#480000";
   clickedEarly = false;
 
   clearTimeout(colorTimeout);
@@ -27,7 +27,7 @@ let startGame = () => {
 
 let earlyClick = () => {
   mainBox.innerText = "You clicked too early!\nClick this box to start again.";
-  mainBox.style.backgroundColor = "red";
+  mainBox.style.backgroundColor = "#480000";
   clickedEarly = true;
   clearTimeout(colorTimeout);
   mainBox.removeEventListener("mousedown", earlyClick);
@@ -38,7 +38,7 @@ mainBox.addEventListener("mousedown", startGame);
 let colorShow = () => {
   if (!clickedEarly) {
     startTime = new Date();
-    mainBox.style.backgroundColor = "green";
+    mainBox.style.backgroundColor = "#066E00";
     mainBox.removeEventListener("mousedown", earlyClick);
     mainBox.removeEventListener("mousedown", startGame);
     mainBox.addEventListener("mousedown", reactionClick);

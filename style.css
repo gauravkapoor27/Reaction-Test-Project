@@ -64,6 +64,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.25s;
 }
 
 .btn:hover {
